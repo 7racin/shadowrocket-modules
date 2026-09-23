@@ -1,0 +1,8 @@
+#!name=SandBox
+#!desc=AppTesters SandBox rule for Shadowrocket
+
+[Script]
+SandBox = type=http-response,pattern=^https:\/\/api\.sandbox\.love\/accounts\/current,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/SandBox.js
+
+[MITM]
+hostname = %APPEND% api.sandbox.love

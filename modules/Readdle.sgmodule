@@ -1,0 +1,8 @@
+#!name=Readdle
+#!desc=AppTesters Readdle rule for Shadowrocket
+
+[Script]
+Readdle = type=http-response,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/(calendarslite|pdfexpert6|documents)\/subscription\/(refresh|check),requires-body=true,max-size=0,script-path=https://apptesters.org/egern/readdle.js
+
+[MITM]
+hostname = %APPEND% license.pdfexpert.com

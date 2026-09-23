@@ -1,0 +1,8 @@
+#!name=MuslimPro
+#!desc=AppTesters MuslimPro rule for Shadowrocket
+
+[Script]
+MuslimPro = type=http-response,pattern=^https:\/\/us-central1-muslim-pro-app\.cloudfunctions\.net\/GetUserPremiumInfo,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/MuslimPro.js
+
+[MITM]
+hostname = %APPEND% us-central1-muslim-pro-app.cloudfunctions.net

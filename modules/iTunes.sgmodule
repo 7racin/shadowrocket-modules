@@ -1,0 +1,8 @@
+#!name=iTunes
+#!desc=AppTesters iTunes receipt rule for Shadowrocket
+
+[Script]
+iTunes = type=http-response,pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/iTunes.js
+
+[MITM]
+hostname = %APPEND% buy.itunes.apple.com

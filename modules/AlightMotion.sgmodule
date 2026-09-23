@@ -1,0 +1,8 @@
+#!name=AlightMotion
+#!desc=AppTesters AlightMotion rule for Shadowrocket
+
+[Script]
+AlightMotion = type=http-response,pattern=^https:\/\/us-central1-alight-creative\.cloudfunctions\.net\/getAccountStatusAndLicenses,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/AlightMotion.js
+
+[MITM]
+hostname = %APPEND% us-central1-alight-creative.cloudfunctions.net

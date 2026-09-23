@@ -1,0 +1,8 @@
+#!name=PicsArt
+#!desc=AppTesters PicsArt rule for Shadowrocket
+
+[Script]
+PicsArt = type=http-request,pattern=^https:\/\/api\.picsart\.com\/gw-v2\/shop\/subscription\/apple\/purchases,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/PicsArt.js
+
+[MITM]
+hostname = %APPEND% api.picsart.com

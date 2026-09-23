@@ -1,0 +1,8 @@
+#!name=VivaCut
+#!desc=AppTesters VivaCut rule for Shadowrocket
+
+[Script]
+VivaCut = type=http-response,pattern=^https:\/\/api-fra\.vivacut\.com\/api\/rest\/commerce\/integrate\/vip\/perform,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/VivaCut.js
+
+[MITM]
+hostname = %APPEND% api-fra.vivacut.com

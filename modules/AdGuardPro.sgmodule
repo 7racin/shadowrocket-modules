@@ -1,0 +1,8 @@
+#!name=AdGuardPro
+#!desc=AppTesters AdGuardPro rule for Shadowrocket
+
+[Script]
+AdGuardPro = type=http-response,pattern=^https:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt\/(.*?),requires-body=true,max-size=0,script-path=https://apptesters.org/egern/AdGuardPro.js
+
+[MITM]
+hostname = %APPEND% mobile-api.adguard.org

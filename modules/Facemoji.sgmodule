@@ -1,0 +1,8 @@
+#!name=Facemoji
+#!desc=AppTesters Facemoji rule for Shadowrocket
+
+[Script]
+Facemoji = type=http-response,pattern=^https:\/\/order\.creativeappnow\.com\/iap\/receipt,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/Facemoji.js
+
+[MITM]
+hostname = %APPEND% order.creativeappnow.com

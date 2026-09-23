@@ -1,0 +1,8 @@
+#!name=AdblockPro
+#!desc=AppTesters AdblockPro rule for Shadowrocket
+
+[Script]
+AdblockPro = type=http-response,pattern=^https:\/\/api\.adblockpro\.app\/verify,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/AdblockPro.js
+
+[MITM]
+hostname = %APPEND% api.adblockpro.app

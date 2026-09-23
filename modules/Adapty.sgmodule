@@ -1,0 +1,8 @@
+#!name=Adapty
+#!desc=AppTesters Adapty rule for Shadowrocket
+
+[Script]
+Adapty = type=http-response,pattern=^https:\/\/api\.adapty\.io\/api\/v1\/sdk\/analytics\/profiles,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/Adapty.js
+
+[MITM]
+hostname = %APPEND% api.adapty.io

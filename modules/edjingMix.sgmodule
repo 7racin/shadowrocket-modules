@@ -1,0 +1,8 @@
+#!name=edjingMix
+#!desc=AppTesters edjingMix rule for Shadowrocket
+
+[Script]
+edjingMix = type=http-response,pattern=^https:\/\/api\.mwm-users\.com\/me\/features,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/edjingMix.js
+
+[MITM]
+hostname = %APPEND% api.mwm-users.com

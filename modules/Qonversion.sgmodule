@@ -1,0 +1,8 @@
+#!name=Qonversion
+#!desc=AppTesters Qonversion rule for Shadowrocket
+
+[Script]
+Qonversion = type=http-response,pattern=^https:\/\/api\.qonversion\.io\/v1\/user\/init,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/qonversion.js
+
+[MITM]
+hostname = %APPEND% api.qonversion.io

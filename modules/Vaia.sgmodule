@@ -1,0 +1,8 @@
+#!name=Vaia
+#!desc=AppTesters Vaia rule for Shadowrocket
+
+[Script]
+Vaia = type=http-response,pattern=^https:\/\/prod\.studysmarter\.de\/payments\/info,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/Vaia.js
+
+[MITM]
+hostname = %APPEND% prod.studysmarter.de

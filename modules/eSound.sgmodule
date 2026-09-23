@@ -1,0 +1,8 @@
+#!name=eSound
+#!desc=AppTesters eSound rule for Shadowrocket
+
+[Script]
+eSound = type=http-response,pattern=^https:\/\/api\.esound\.app\/account,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/eSound.js
+
+[MITM]
+hostname = %APPEND% api.esound.app

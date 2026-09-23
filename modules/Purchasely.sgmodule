@@ -1,0 +1,8 @@
+#!name=Purchasely
+#!desc=AppTesters Purchasely rule for Shadowrocket
+
+[Script]
+Purchasely = type=http-response,pattern=^https:\/\/api\.purchasely\.io\/paab\/user_purchases,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/purchasely.js
+
+[MITM]
+hostname = %APPEND% api.purchasely.io

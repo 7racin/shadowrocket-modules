@@ -1,0 +1,8 @@
+#!name=Grammarly
+#!desc=AppTesters Grammarly rule for Shadowrocket
+
+[Script]
+Grammarly = type=http-response,pattern=^https?:\/\/subscription\.grammarly\.com\/api\/v1\/subscription$,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/Grammarly.js
+
+[MITM]
+hostname = %APPEND% subscription.grammarly.com

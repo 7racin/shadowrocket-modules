@@ -1,0 +1,8 @@
+#!name=KineMaster
+#!desc=AppTesters KineMaster rule for Shadowrocket
+
+[Script]
+KineMaster = type=http-response,pattern=^https:\/\/api-account\.kinemasters\.com\/v2\/user\/subscribe,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/KineMaster.js
+
+[MITM]
+hostname = %APPEND% api-account.kinemasters.com

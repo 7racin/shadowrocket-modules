@@ -1,0 +1,8 @@
+#!name=Carrot
+#!desc=AppTesters Carrot rule for Shadowrocket
+
+[Script]
+Carrot = type=http-response,pattern=^https:\/\/carrotweather\.herokuapp\.com\/parse\/functions\/findSubscriptionsForUserId,requires-body=true,max-size=0,script-path=https://apptesters.org/egern/Carrot.js
+
+[MITM]
+hostname = %APPEND% carrotweather.herokuapp.com
